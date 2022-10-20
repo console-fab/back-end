@@ -1,8 +1,8 @@
-const mongoose = require('../connection');
+const mongoose = require('../db/connection');
 const Schema = mongoose.Schema;
 
 const groceryItemSchema = new Schema({
-	item_name: String,
+	item_name: {type: String, required: true},
     category: String,
     quantity: Number,
     location: String
