@@ -9,11 +9,6 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Redirect
-app.get('/', (req, res) => {
-	res.redirect('/grocery-list');
-});
-
 // Controllers
 app.use('/grocery-list', groceryItemsController);
 
