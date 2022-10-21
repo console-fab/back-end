@@ -4,8 +4,8 @@ const GroceryItems = require('../models/groceryItem');
 const router = express.Router();
 
 // Index: Get all grocery items
-http://localhost:8000/grocery-list/
-router.get('/', async (req, res) => {
+//localhost:8000/grocery-list/
+http: router.get('/', async (req, res) => {
 	try {
 		res.json(await GroceryItems.find({}));
 	} catch (error) {
@@ -51,10 +51,13 @@ router.patch('/:id', async (req, res) => {
 // http://localhost:8000/grocery-list/:id
 router.delete('/:id', async (req, res, next) => {
 	try {
-		const deleteGroceryItem = await GroceryItems.findByIdAndDelete(req.params.id);
+		const deleteGroceryItem = await GroceryItems.findByIdAndDelete(
+			req.params.id
+		);
 		res.json(deleteGroceryItem);
 	} catch (err) {
 		next(err);
 	}
 });
 module.exports = router;
+//comment
