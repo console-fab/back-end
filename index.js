@@ -13,6 +13,8 @@ app.use(cors());
 // Controllers
 app.use('/grocery-list', groceryItemsController);
 
+app.set('port', PORT);
+
 app.listen(8000, () => {
 	console.log('🛒 cart... start!!! on port:' + PORT);
 });
