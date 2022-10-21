@@ -2,7 +2,7 @@ const mongoose = require('../db/connection');
 const Schema = mongoose.Schema;
 
 const groceryItemSchema = new Schema({
-	item_name: { type: String, required: true },
+	name: String,
 	category: String,
 	quantity: Number,
 	location: String,
