@@ -2,7 +2,7 @@
 
 
 ## Description
-this API will provide Item-name, category, quantity and location for GroceryList. a simple web application built to serve basic needs.
+This API will provide Item-name, category, quantity and location for GroceryList. a simple web application built to serve basic needs.
 
 This project was created with [MongoDB](https://www.mongodb.com/),[Mongoose](https://mongoosejs.com/), [Express](https://expressjs.com/).
 
