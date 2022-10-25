@@ -18,7 +18,7 @@ In the project directory, you can run:
 You can learn more in the [Create Api App documentation](https://www.mongodb.com/languages/express-mongodb-rest-api-tutorial).
 
 
-## Contribution Guidelines
+## Deployment
 
 [Cloud Application Platform](https://cart-start.herokuapp.com/grocery-list)
 
