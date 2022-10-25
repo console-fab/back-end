@@ -10,7 +10,7 @@ This project was created with [MongoDB](https://www.mongodb.com/),[Mongoose](htt
 ## Available Scripts
 
 In the project directory, you can run:
-# `node index.js`
+`node index.js`
 
 
 ## Learn More
