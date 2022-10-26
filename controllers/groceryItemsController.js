@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 	try {
 		res.json(await GroceryItems.find({}));
 	} catch (error) {
-		res.status(400).json(error);
+		res.status(200).json(error);
 	}
 });
 
@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
 	try {
 		res.json(await GroceryItems.findById({ _id: req.params.id }));
 	} catch (error) {
-		res.status(400).json(error);
+		res.status(200).json(error);
 	}
 });
 
@@ -28,7 +28,7 @@ router.post('/', async (req, res) => {
 	try {
 		res.json(await GroceryItems.create(req.body));
 	} catch (error) {
-		res.status(400).json(error);
+		res.status(201).json(error);
 	}
 });
 
@@ -41,19 +41,19 @@ router.patch('/:id', async (req, res) => {
 			})
 		);
 	} catch (error) {
-		res.status(400).json(error);
+		res.status(204).json(error);
 	}
 });
 
 // Delete: Remove a grocery item by id
-router.delete('/:id', async (req, res, next) => {
+router.delete('/:id', async (req, res) => {
 	try {
 		const deleteGroceryItem = await GroceryItems.findByIdAndDelete(
 			req.params.id
 		);
 		res.json(deleteGroceryItem);
-	} catch (err) {
-		next(err);
+	} catch (error) {
+		res.status(204).json(error);
 	}
 });
 
