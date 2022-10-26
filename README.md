@@ -6,6 +6,9 @@ This API will provide Item-name, category, quantity, and location for GroceryLis
 
 This project was created with [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/), [Express](https://expressjs.com/).
 
+## Planning
+
+Here is a link to our [planning board](https://crawling-snarl-6d7.notion.site/ff2eb8740c514985a31f92284c43a70e?v=9771575d395c4c76900bc491e7031b06).
 
 ## Available Scripts
 
