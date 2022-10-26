@@ -2,7 +2,7 @@
 const mongoose = require('../db/connection');
 const Schema = mongoose.Schema;
 
-// creating a Schema
+// create Schema
 const groceryItemSchema = new Schema({
 	name: String,
 	category: String,
@@ -13,6 +13,5 @@ const groceryItemSchema = new Schema({
 // compiling model
 const GroceryItem = mongoose.model('GroceryItem', groceryItemSchema);
 
-//exporting module
+
 module.exports = GroceryItem;
-//comment

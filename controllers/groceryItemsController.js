@@ -1,10 +1,11 @@
+// include express in project
 const express = require('express');
 const GroceryItems = require('../models/groceryItem');
 
+// creates a router as a module
 const router = express.Router();
 
-// Index: Get all grocery items
-//localhost:8000/grocery-list/
+// define the home page route
 http: router.get('/', async (req, res) => {
 	try {
 		res.json(await GroceryItems.find({}));
@@ -13,8 +14,7 @@ http: router.get('/', async (req, res) => {
 	}
 });
 
-// Show: Get one grocery item by id
-// http://localhost:8000/grocery-list/:id
+// Show: Get grocery item by id
 router.get('/:id', async (req, res) => {
 	try {
 		res.json(await GroceryItems.findById({ _id: req.params.id }));
@@ -24,7 +24,6 @@ router.get('/:id', async (req, res) => {
 });
 
 // Create: Add a grocery item
-// http://localhost:8000/grocery-list/
 router.post('/', async (req, res) => {
 	try {
 		res.json(await GroceryItems.create(req.body));
@@ -34,7 +33,6 @@ router.post('/', async (req, res) => {
 });
 
 // Update: Edit a grocery item by id
-// http://localhost:8000/grocery-list/:id
 router.patch('/:id', async (req, res) => {
 	try {
 		res.json(
@@ -48,7 +46,6 @@ router.patch('/:id', async (req, res) => {
 });
 
 // Delete: Remove a grocery item by id
-// http://localhost:8000/grocery-list/:id
 router.delete('/:id', async (req, res, next) => {
 	try {
 		const deleteGroceryItem = await GroceryItems.findByIdAndDelete(
@@ -59,5 +56,5 @@ router.delete('/:id', async (req, res, next) => {
 		next(err);
 	}
 });
+
 module.exports = router;
-//comment
