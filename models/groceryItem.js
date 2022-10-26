@@ -2,7 +2,7 @@
 const mongoose = require('../db/connection');
 const Schema = mongoose.Schema;
 
-// creating a Schema
+// create Schema
 const groceryItemSchema = new Schema({
 	item_name: { type: String, required: true },
 	category: String,
