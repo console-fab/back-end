@@ -1,6 +1,6 @@
 // include express in project
 const express = require('express');
-const GroceryItems = require('../models/GroceryItem');
+const GroceryItems = require('../models/groceryItem');
 
 // creates a router as a module
 const router = express.Router();
