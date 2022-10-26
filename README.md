@@ -21,6 +21,6 @@ You can learn more in the [Create Api App documentation](https://www.mongodb.com
 
 ## Deployment
 
-[Cloud Application Platform](https://cart-start.herokuapp.com)
+[Deployed Heroku Link](https://cart-start.herokuapp.com)
 
-[Project's main repository](https://github.com/console-fab/cart-start-api)
+[Project's github repository](https://github.com/console-fab/cart-start-api)
