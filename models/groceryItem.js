@@ -13,6 +13,5 @@ const groceryItemSchema = new Schema({
 // compiling model
 const GroceryItem = mongoose.model('GroceryItem', groceryItemSchema);
 
-//exporting module
+
 module.exports = GroceryItem;
-//comment
