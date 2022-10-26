@@ -15,6 +15,9 @@ const PORT = process.env.PORT || 8000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+app.get('/', (req, res) => {
+	res.redirect('/grocery-list');
+});
 
 // This function adding new middleware to the grocery-list
 app.use('/grocery-list', groceryItemsController);
