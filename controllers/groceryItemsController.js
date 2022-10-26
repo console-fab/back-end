@@ -6,7 +6,7 @@ const GroceryItems = require('../models/groceryItem');
 const router = express.Router();
 
 // define the home page route
-http: router.get('/', async (req, res) => {
+router.get('/', async (req, res) => {
 	try {
 		res.json(await GroceryItems.find({}));
 	} catch (error) {
