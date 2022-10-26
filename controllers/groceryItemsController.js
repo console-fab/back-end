@@ -1,6 +1,6 @@
 // include express in project
 const express = require('express');
-const GroceryItems = require('../models/groceryItem');
+const GroceryItems = require('../models/GroceryItem');
 
 // creates a router as a module
 const router = express.Router();
@@ -14,7 +14,7 @@ http: router.get('/', async (req, res) => {
 	}
 });
 
-// Show: define grocery item by id
+// Show: Get grocery item by id
 router.get('/:id', async (req, res) => {
 	try {
 		res.json(await GroceryItems.findById({ _id: req.params.id }));
